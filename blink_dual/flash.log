@@ -1,0 +1,211 @@
+    12:16:17:181 : UR connection mode is defined with the HWrst reset mode
+12:16:17:713 : ST-LINK SN  : 002C002B3532510A31333430
+12:16:17:713 : ST-LINK FW  : V3J13M4
+12:16:17:713 : Board       : NUCLEO-H755ZI-Q
+12:16:17:713 : Voltage     : 3.28V
+12:16:17:713 : SWD freq    : 8000 KHz
+12:16:17:714 : Connect mode: Normal
+12:16:17:714 : Reset mode  : Hardware reset
+12:16:17:714 : Device ID   : 0x450
+12:16:17:714 : Revision ID : Rev V
+12:16:17:714 : Buffer program...
+12:16:17:714 : w ap 3 @0x580244F4 : 0x00000004 bytes, Data 0x00000002...
+12:16:17:715 : Reading data...
+12:16:17:715 : r ap 3 @0x58000528 0x00000004 bytes Data 0x00000000
+12:16:17:715 : Database: Config 0 is active.
+12:16:17:715 : flash loader /home/csrohit/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin/FlashLoader/0x450.stldr is loaded
+12:16:17:715 : Debug in Low Power mode is not supported for this device.
+12:16:17:715 : Reading data...
+12:16:17:715 : r ap 3 @0x1FF1E880 0x00000004 bytes Data 0x00000080
+12:16:17:716 : r ap 3 @0x1FF1E880 0x00000004 bytes Data 0x00000018
+12:16:17:716 : failed to read the requested memory content
+12:16:18:012 : UPLOADING OPTION BYTES DATA ...
+12:16:18:012 :   Bank          : 0x00
+12:16:18:013 :   Address       : 0x5200201c
+12:16:18:013 :   Size          : 308 Bytes
+12:16:18:013 : Reading data...
+12:16:18:013 : r ap 3 @0x5200201C 0x00000134 bytes Data 0x1BC6AAF0
+12:16:18:013 : UPLOADING OPTION BYTES DATA ...
+12:16:18:013 :   Bank          : 0x00
+12:16:18:013 :   Address       : 0x5200201c
+12:16:18:013 :   Size          : 308 Bytes
+12:16:18:013 : Reading data...
+12:16:18:013 : r ap 3 @0x5200201C 0x00000134 bytes Data 0x1BC6AAF0
+12:16:18:013 : UPLOADING ...
+12:16:18:013 :   Size          : 1024 Bytes
+12:16:18:013 :   Address       : 0x8100000
+12:16:18:013 : Read progress:
+12:16:18:013 : Reading data...
+12:16:18:013 : r ap 3 @0x08100000 0x00000400 bytes Data 0x10048000
+12:16:18:013 : Data read successfully
+12:16:18:013 : Time elapsed during the read operation is: 00:00:00.003
+12:16:37:280 : Memory Programming ...
+12:16:37:280 : Opening and parsing file: blink.bin
+12:16:37:280 :   File          : blink.bin
+12:16:37:280 :   Size          : 808.00 B 
+12:16:37:280 :   Address       : 0x08100000 
+12:16:37:281 : Erasing Segment <0> Address <0x08100000> Size <808>Bytes
+12:16:37:281 : Erasing memory corresponding to segment 0:
+12:16:37:281 : Memory Erase via FlashLoader!
+12:16:37:281 : Memory erase...
+12:16:37:281 : halt ap 0 Status = 0
+12:16:37:281 : halt ap 1 Status = 32
+12:16:37:281 : halt ap 2 Status = 32
+12:16:37:281 : halt ap 3 Status = 0
+12:16:37:281 : w ap 3 reg 15 PC   (0x24000000)  
+12:16:37:281 : w ap 3 reg 17 MSP  (0x24000500)  
+12:16:37:281 : w ap 3 reg 16 xPSR (0x01000000)  
+12:16:37:281 : w ap 3 @0x24001020 : 0x00000200 bytes, Data 0x00000000...
+12:16:37:282 : w ap 3 @0x24000000 : 0x00000004 bytes, Data 0x0000BE00...
+12:16:37:305 : w ap 3 @0x24000004 : 0x00000BEC bytes, Data 0xB672B538...
+12:16:37:305 : Erasing internal memory sector 8
+12:16:37:305 : Init flashloader...
+12:16:37:306 : halt ap 3 
+12:16:37:306 : w ap 3 reg 0 R0   0x00000001
+12:16:37:306 : w ap 3 reg 1 R1   0x00000000
+12:16:37:307 : w ap 3 reg 2 R2   0x00000000
+12:16:37:307 : w ap 3 reg 3 R3   0x00000000
+12:16:37:307 : w ap 3 reg 4 R4   0x00000000
+12:16:37:316 : w ap 3 reg 5 R5   0x00000000
+12:16:37:317 : w ap 3 reg 6 R6   0x00000000
+12:16:37:317 : w ap 3 reg 7 R7   0x00000000
+12:16:37:317 : w ap 3 reg 8 R8   0x00000000
+12:16:37:317 : w ap 3 reg 9 R9   0x00000000
+12:16:37:317 : w ap 3 reg 10 R10  0x00000000
+12:16:37:317 : w ap 3 reg 11 R11  0x00000000
+12:16:37:317 : w ap 3 reg 12 R12  0x00000000
+12:16:37:318 : w ap 3 reg 13 SP   0x00000000
+12:16:37:318 : w ap 3 reg 14 LR   0x24000001
+12:16:37:318 : w ap 3 reg 15 PC   0x24000005
+12:16:37:318 : w ap 3 reg 16 xPSR 0x01000000
+12:16:37:318 : w ap 3 reg 17 MSP  0x24000FEC
+12:16:37:318 : w ap 3 reg 18 PSP  0x00000000
+12:16:37:319 : run ap 3 
+12:16:37:319 : halt ap 3 
+12:16:37:319 : r ap 3 reg 0 R0   0x00000001
+12:16:37:319 : Loader sector erase...
+12:16:37:319 : w ap 3 reg 0 R0   0x08100000
+12:16:37:319 : w ap 3 reg 1 R1   0x08100000
+12:16:37:320 : w ap 3 reg 2 R2   0x00000002
+12:16:37:320 : w ap 3 reg 3 R3   0x00000000
+12:16:37:320 : w ap 3 reg 4 R4   0x00000000
+12:16:37:320 : w ap 3 reg 5 R5   0x00000000
+12:16:37:321 : w ap 3 reg 6 R6   0x00000000
+12:16:37:321 : w ap 3 reg 7 R7   0x00000000
+12:16:37:321 : w ap 3 reg 8 R8   0x00000000
+12:16:37:321 : w ap 3 reg 9 R9   0x00000000
+12:16:37:321 : w ap 3 reg 10 R10  0x00000000
+12:16:37:321 : w ap 3 reg 11 R11  0x00000000
+12:16:37:322 : w ap 3 reg 12 R12  0x00000000
+12:16:37:322 : w ap 3 reg 13 SP   0x00000000
+12:16:37:322 : w ap 3 reg 14 LR   0x24000001
+12:16:37:322 : w ap 3 reg 15 PC   0x24000327
+12:16:37:322 : w ap 3 reg 16 xPSR 0x01000000
+12:16:37:323 : w ap 3 reg 17 MSP  0x24000FEC
+12:16:37:323 : w ap 3 reg 18 PSP  0x00000000
+12:16:37:323 : run ap 3 
+12:16:38:134 : halt ap 3 
+12:16:38:135 : r ap 3 reg 0 R0   0x00000001
+12:16:38:135 : erase: 0861ms
+12:16:38:135 : Download in Progress:
+12:16:38:135 :   Size          : 832 Bytes
+12:16:38:136 :   Address       : 0x08100000 
+12:16:38:136 : Buffer program...
+12:16:38:138 : halt ap 0 Status = 0
+12:16:38:138 : halt ap 1 Status = 32
+12:16:38:138 : halt ap 2 Status = 32
+12:16:38:138 : halt ap 3 Status = 0
+12:16:38:138 : w ap 3 reg 15 PC   (0x24000000)  
+12:16:38:138 : w ap 3 reg 17 MSP  (0x24000500)  
+12:16:38:138 : w ap 3 reg 16 xPSR (0x01000000)  
+12:16:38:144 : w ap 3 @0x24001020 : 0x00000200 bytes, Data 0x00000000...
+12:16:38:144 : w ap 3 @0x24000000 : 0x00000004 bytes, Data 0x0000BE00...
+12:16:38:152 : w ap 3 @0x24000004 : 0x00000BEC bytes, Data 0xB672B538...
+12:16:38:152 : Loader write range...
+12:16:38:152 : w ap 3 @0x24001020 : 0x000001A0 bytes, Data 0x10048000...
+12:16:38:152 : W B1 in RAM @0x24001020 size 0x000001A0 : 0001ms
+12:16:38:152 : Init flashloader...
+12:16:38:152 : halt ap 3 
+12:16:38:152 : w ap 3 reg 0 R0   0x00000001
+12:16:38:152 : w ap 3 reg 1 R1   0x00000000
+12:16:38:152 : w ap 3 reg 2 R2   0x00000000
+12:16:38:152 : w ap 3 reg 3 R3   0x00000000
+12:16:38:152 : w ap 3 reg 4 R4   0x00000000
+12:16:38:152 : w ap 3 reg 5 R5   0x00000000
+12:16:38:152 : w ap 3 reg 6 R6   0x00000000
+12:16:38:152 : w ap 3 reg 7 R7   0x00000000
+12:16:38:152 : w ap 3 reg 8 R8   0x00000000
+12:16:38:152 : w ap 3 reg 9 R9   0x00000000
+12:16:38:152 : w ap 3 reg 10 R10  0x00000000
+12:16:38:153 : w ap 3 reg 11 R11  0x00000000
+12:16:38:153 : w ap 3 reg 12 R12  0x00000000
+12:16:38:153 : w ap 3 reg 13 SP   0x00000000
+12:16:38:153 : w ap 3 reg 14 LR   0x24000001
+12:16:38:153 : w ap 3 reg 15 PC   0x24000005
+12:16:38:153 : w ap 3 reg 16 xPSR 0x01000000
+12:16:38:153 : w ap 3 reg 17 MSP  0x24000FEC
+12:16:38:155 : w ap 3 reg 18 PSP  0x00000000
+12:16:38:155 : run ap 3 
+12:16:38:159 : halt ap 3 
+12:16:38:159 : r ap 3 reg 0 R0   0x00000001
+12:16:38:160 : w ap 3 reg 0 R0   0x08100000
+12:16:38:160 : w ap 3 reg 1 R1   0x000001A0
+12:16:38:160 : w ap 3 reg 2 R2   0x24001020
+12:16:38:160 : w ap 3 reg 3 R3   0x00000002
+12:16:38:160 : w ap 3 reg 4 R4   0x00000000
+12:16:38:160 : w ap 3 reg 5 R5   0x00000000
+12:16:38:160 : w ap 3 reg 6 R6   0x00000000
+12:16:38:161 : w ap 3 reg 7 R7   0x00000000
+12:16:38:161 : w ap 3 reg 8 R8   0x00000000
+12:16:38:161 : w ap 3 reg 9 R9   0x00000000
+12:16:38:161 : w ap 3 reg 10 R10  0x00000000
+12:16:38:161 : w ap 3 reg 11 R11  0x00000000
+12:16:38:162 : w ap 3 reg 12 R12  0x00000000
+12:16:38:162 : w ap 3 reg 13 SP   0x00000000
+12:16:38:162 : w ap 3 reg 14 LR   0x24000001
+12:16:38:162 : w ap 3 reg 15 PC   0x24000111
+12:16:38:162 : w ap 3 reg 16 xPSR 0x01000000
+12:16:38:162 : w ap 3 reg 17 MSP  0x24000FEC
+12:16:38:166 : w ap 3 reg 18 PSP  0x00000000
+12:16:38:166 : run ap 3 
+12:16:38:166 : w ap 3 @0x240011C0 : 0x000001A0 bytes, Data 0xE006617B...
+12:16:38:166 : W B2 in RAM @0x24040620 size 0x000001A0: 0013ms
+12:16:38:167 : r ap 3 reg 0 R0   0x00000001
+12:16:38:167 : Wait W B1 in Flash @0x08100000 size 0x000001A0: 0001ms
+12:16:38:168 : w ap 3 reg 0 R0   0x081001A0
+12:16:38:169 : w ap 3 reg 1 R1   0x000001A0
+12:16:38:169 : w ap 3 reg 2 R2   0x240011C0
+12:16:38:169 : w ap 3 reg 3 R3   0x00000002
+12:16:38:169 : w ap 3 reg 4 R4   0x00000000
+12:16:38:169 : w ap 3 reg 5 R5   0x00000000
+12:16:38:171 : w ap 3 reg 6 R6   0x00000000
+12:16:38:172 : w ap 3 reg 7 R7   0x00000000
+12:16:38:172 : w ap 3 reg 8 R8   0x00000000
+12:16:38:172 : w ap 3 reg 9 R9   0x00000000
+12:16:38:172 : w ap 3 reg 10 R10  0x00000000
+12:16:38:172 : w ap 3 reg 11 R11  0x00000000
+12:16:38:172 : w ap 3 reg 12 R12  0x00000000
+12:16:38:172 : w ap 3 reg 13 SP   0x00000000
+12:16:38:172 : w ap 3 reg 14 LR   0x24000001
+12:16:38:172 : w ap 3 reg 15 PC   0x24000111
+12:16:38:172 : w ap 3 reg 16 xPSR 0x01000000
+12:16:38:172 : w ap 3 reg 17 MSP  0x24000FEC
+12:16:38:172 : w ap 3 reg 18 PSP  0x00000000
+12:16:38:172 : run ap 3 
+12:16:38:173 : r ap 3 reg 0 R0   0x00000001
+12:16:38:173 : Write elapsed time: 0021ms
+12:16:38:173 : Segment[0] downloaded successfully
+12:16:38:173 : File download complete
+12:16:38:178 : Time elapsed during download operation: 00:00:00.894
+12:16:38:178 : Verifying ...
+12:16:38:178 : Read progress:
+12:16:38:178 : Reading data...
+12:16:38:180 : r ap 3 @0x08100000 0x00000340 bytes Data 0x10048000
+12:16:38:180 : Download verified successfully 
+12:16:38:189 : RUNNING Program ... 
+12:16:38:189 :   Address:      : 0x08100000
+12:16:38:194 : w ap 3 reg 15 PC   0x08100111
+12:16:38:194 : w ap 3 reg 17 MSP  0x10048000
+12:16:38:194 : w ap 3 reg 16 xPSR 0x01000000
+12:16:38:196 : Application is running, Please Hold on...
+12:16:38:196 : Start operation achieved successfully
