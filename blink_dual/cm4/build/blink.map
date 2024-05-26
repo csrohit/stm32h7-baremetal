@@ -10,8 +10,8 @@ RAM              0x10000000         0x00048000         xrw
 
 Linker script and memory map
 
-LOAD build/src/startup_stm32h7.o
 LOAD build/src/main.o
+LOAD build/src/startup_stm32h7.o
                 0x10048000                        _estack = (ORIGIN (RAM) + LENGTH (RAM))
 
 .isr_vector     0x08100000      0x110
@@ -24,14 +24,14 @@ LOAD build/src/main.o
 .text           0x08100110      0x218
                 0x08100110                        . = ALIGN (0x4)
  *(.text)
- .text          0x08100110       0xbc build/src/startup_stm32h7.o
-                0x08100110                Reset_Handler
-                0x08100154                memcpy
-                0x08100192                memset
- .text          0x081001cc      0x15c build/src/main.o
-                0x08100264                SysTick_Handler
-                0x08100280                ms_delay
-                0x081002b4                main
+ .text          0x08100110      0x15c build/src/main.o
+                0x081001a8                SysTick_Handler
+                0x081001c4                ms_delay
+                0x081001f8                main
+ .text          0x0810026c       0xbc build/src/startup_stm32h7.o
+                0x0810026c                Reset_Handler
+                0x081002b0                memcpy
+                0x081002ee                memset
  *(.text*)
                 0x08100328                        . = ALIGN (0x4)
                 0x08100328                        _etext = .
@@ -49,10 +49,10 @@ LOAD build/src/main.o
  .v4_bx         0x08100328        0x0 linker stubs
 
 .iplt           0x08100328        0x0
- .iplt          0x08100328        0x0 build/src/startup_stm32h7.o
+ .iplt          0x08100328        0x0 build/src/main.o
 
 .rel.dyn        0x08100328        0x0
- .rel.iplt      0x08100328        0x0 build/src/startup_stm32h7.o
+ .rel.iplt      0x08100328        0x0 build/src/main.o
 
 .rodata         0x08100328        0x0
                 0x08100328                        . = ALIGN (0x4)
@@ -65,22 +65,22 @@ LOAD build/src/main.o
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _sdata = .
  *(.data)
- .data          0x10000000        0x0 build/src/startup_stm32h7.o
  .data          0x10000000        0x0 build/src/main.o
+ .data          0x10000000        0x0 build/src/startup_stm32h7.o
  *(.data*)
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _edata = .
 
 .igot.plt       0x10000000        0x0 load address 0x08100328
- .igot.plt      0x10000000        0x0 build/src/startup_stm32h7.o
+ .igot.plt      0x10000000        0x0 build/src/main.o
                 0x10000000                        . = ALIGN (0x4)
 
 .bss            0x10000000        0x4 load address 0x08100328
                 0x10000000                        _sbss = .
  *(.bss)
- .bss           0x10000000        0x0 build/src/startup_stm32h7.o
  .bss           0x10000000        0x4 build/src/main.o
                 0x10000000                msTicks
+ .bss           0x10000004        0x0 build/src/startup_stm32h7.o
  *(.bss*)
  *(COMMON)
                 0x10000004                        . = ALIGN (0x4)
@@ -92,49 +92,49 @@ LOAD build/src/main.o
  libgcc.a(*)
 OUTPUT(build/blink.elf elf32-littlearm)
 LOAD linker stubs
-LOAD /opt/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
-LOAD /opt/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
-LOAD /opt/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/libgcc.a
+LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
+LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
+LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/libgcc.a
 
 .debug_info     0x00000000     0x1051
- .debug_info    0x00000000      0x20a build/src/startup_stm32h7.o
- .debug_info    0x0000020a      0xe47 build/src/main.o
+ .debug_info    0x00000000      0xe47 build/src/main.o
+ .debug_info    0x00000e47      0x20a build/src/startup_stm32h7.o
 
 .debug_abbrev   0x00000000      0x307
- .debug_abbrev  0x00000000      0x131 build/src/startup_stm32h7.o
- .debug_abbrev  0x00000131      0x1d6 build/src/main.o
+ .debug_abbrev  0x00000000      0x1d6 build/src/main.o
+ .debug_abbrev  0x000001d6      0x131 build/src/startup_stm32h7.o
 
 .debug_loc      0x00000000      0x2b8
- .debug_loc     0x00000000       0xe4 build/src/startup_stm32h7.o
- .debug_loc     0x000000e4      0x1d4 build/src/main.o
+ .debug_loc     0x00000000      0x1d4 build/src/main.o
+ .debug_loc     0x000001d4       0xe4 build/src/startup_stm32h7.o
 
 .debug_aranges  0x00000000       0x40
  .debug_aranges
-                0x00000000       0x20 build/src/startup_stm32h7.o
+                0x00000000       0x20 build/src/main.o
  .debug_aranges
-                0x00000020       0x20 build/src/main.o
+                0x00000020       0x20 build/src/startup_stm32h7.o
 
-.debug_line     0x00000000      0x2b1
- .debug_line    0x00000000      0x121 build/src/startup_stm32h7.o
- .debug_line    0x00000121      0x190 build/src/main.o
+.debug_line     0x00000000      0x329
+ .debug_line    0x00000000      0x1ca build/src/main.o
+ .debug_line    0x000001ca      0x15f build/src/startup_stm32h7.o
 
-.debug_str      0x00000000      0xd4b
- .debug_str     0x00000000      0xd4b build/src/startup_stm32h7.o
-                                0x1cf (size before relaxing)
- .debug_str     0x00000d4b      0xd5a build/src/main.o
+.debug_str      0x00000000      0xd50
+ .debug_str     0x00000000      0xd50 build/src/main.o
+                                0xd5f (size before relaxing)
+ .debug_str     0x00000d50      0x1d4 build/src/startup_stm32h7.o
 
 .comment        0x00000000       0x44
- .comment       0x00000000       0x44 build/src/startup_stm32h7.o
+ .comment       0x00000000       0x44 build/src/main.o
                                  0x45 (size before relaxing)
- .comment       0x00000044       0x45 build/src/main.o
+ .comment       0x00000044       0x45 build/src/startup_stm32h7.o
 
 .ARM.attributes
                 0x00000000       0x34
  .ARM.attributes
-                0x00000000       0x34 build/src/startup_stm32h7.o
+                0x00000000       0x34 build/src/main.o
  .ARM.attributes
-                0x00000034       0x34 build/src/main.o
+                0x00000034       0x34 build/src/startup_stm32h7.o
 
 .debug_frame    0x00000000      0x164
- .debug_frame   0x00000000       0x7c build/src/startup_stm32h7.o
- .debug_frame   0x0000007c       0xe8 build/src/main.o
+ .debug_frame   0x00000000       0xe8 build/src/main.o
+ .debug_frame   0x000000e8       0x7c build/src/startup_stm32h7.o

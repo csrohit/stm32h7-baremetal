@@ -41,8 +41,8 @@ $(BUILD_DIR)/%.o: %.c
 	@mkdir -p $(dir $@)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
-flash: bin
-	st-flash write $(BUILD_DIR)/$(TARGET).bin 0x8000000
+flash: elf
+	STM32_Programmer_CLI -c port=SWD ap=0 -w $(BUILD_DIR)/$(TARGET).elf -rst
 
 clean:
 	rm -rf $(BUILD_DIR)
