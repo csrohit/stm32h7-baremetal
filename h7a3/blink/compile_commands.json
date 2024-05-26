@@ -1,0 +1,40 @@
+[
+ {
+  "directory": "/home/csrohit/code/stm32h7-baremetal/blink",
+  "arguments": [
+   "arm-none-eabi-gcc",
+   "-Iinclude",
+   "-DSTM32H7A3xxQ",
+   "-mcpu=cortex-m4",
+   "-mfloat-abi=soft",
+   "-mthumb",
+   "-g",
+   "-gdwarf-2",
+   "-nostdlib",
+   "-c",
+   "src/startup_stm32h7.c",
+   "-o",
+   "build/src/startup_stm32h7.o"
+  ],
+  "file": "src/startup_stm32h7.c"
+ },
+ {
+  "directory": "/home/csrohit/code/stm32h7-baremetal/blink",
+  "arguments": [
+   "arm-none-eabi-gcc",
+   "-Iinclude",
+   "-DSTM32H7A3xxQ",
+   "-mcpu=cortex-m4",
+   "-mfloat-abi=soft",
+   "-mthumb",
+   "-g",
+   "-gdwarf-2",
+   "-nostdlib",
+   "-c",
+   "src/main.c",
+   "-o",
+   "build/src/main.o"
+  ],
+  "file": "src/main.c"
+ }
+]

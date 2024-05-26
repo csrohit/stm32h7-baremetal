@@ -52,11 +52,11 @@ int main(void) {
 
     while (1) {
         gpio_toggle(GPIOB, GPIO_ODR_OD0);
-        ms_delay(200);
+        ms_delay(100);
         gpio_toggle(GPIOE, GPIO_ODR_OD1);
-        ms_delay(200);
+        ms_delay(100);
         gpio_toggle(GPIOB, GPIO_ODR_OD14);
-        ms_delay(200);
+        ms_delay(100);
     }
 }
 

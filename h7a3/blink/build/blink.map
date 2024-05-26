@@ -117,21 +117,20 @@ LOAD /opt/st/stm32cubeclt/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/11.3.
  .debug_aranges
                 0x0000000000000020       0x20 build/src/main.o
 
-.debug_line     0x0000000000000000      0x2e4
- .debug_line    0x0000000000000000      0x121 build/src/startup_stm32h7.o
- .debug_line    0x0000000000000121      0x1c3 build/src/main.o
+.debug_line     0x0000000000000000      0x31c
+ .debug_line    0x0000000000000000      0x159 build/src/startup_stm32h7.o
+ .debug_line    0x0000000000000159      0x1c3 build/src/main.o
 
-.debug_str      0x0000000000000000      0xdca
+.debug_str      0x0000000000000000      0xd6c
  .debug_str     0x0000000000000000      0x16f build/src/startup_stm32h7.o
                                         0x1b1 (size before relaxing)
- .debug_str     0x000000000000016f      0xc5b build/src/main.o
+ .debug_str     0x000000000000016f      0xbfd build/src/main.o
                                         0xd7b (size before relaxing)
 
-.comment        0x0000000000000000       0x87
- .comment       0x0000000000000000       0x44 build/src/startup_stm32h7.o
-                                         0x45 (size before relaxing)
- .comment       0x0000000000000044       0x43 build/src/main.o
+.comment        0x0000000000000000       0x43
+ .comment       0x0000000000000000       0x43 build/src/startup_stm32h7.o
                                          0x44 (size before relaxing)
+ .comment       0x0000000000000043       0x44 build/src/main.o
 
 .ARM.attributes
                 0x0000000000000000       0x2e
