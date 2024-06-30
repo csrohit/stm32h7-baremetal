@@ -4,7 +4,7 @@
 ENTRY(Reset_Handler)
 
 /* value of stack pointer */
-_estack = ORIGIN(RAM) + LENGTH(RAM);
+_stack_top = ORIGIN(RAM) + LENGTH(RAM);
 
 /* Memories definition */
 MEMORY

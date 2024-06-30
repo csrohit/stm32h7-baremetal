@@ -1,14 +1,14 @@
 TARGET = blink
 
-LDSCRIPT 	= stm32h7.ld
+LDSCRIPT 	= stm32h7_m7.ld
 
-PREFIX      =   arm-none-eabi
-CC          =   ${PREFIX}-gcc
-LD 		    =   ${PREFIX}-ld
-AS 		    =   ${PREFIX}-as
-GDB 	    =   ${PREFIX}-gdb
-OBJCOPY     =   ${PREFIX}-objcopy
-SIZE     	=   ${PREFIX}-size
+PREFIX      = arm-none-eabi
+CC          = ${PREFIX}-gcc
+LD 		    = ${PREFIX}-ld
+AS 		    = ${PREFIX}-as
+GDB 	    = ${PREFIX}-gdb
+OBJCOPY     = ${PREFIX}-objcopy
+SIZE     	= ${PREFIX}-size
 
 SRC_DIRS    = src
 BUILD_DIR   = build
@@ -41,6 +41,8 @@ $(BUILD_DIR)/%.o: %.c
 	@mkdir -p $(dir $@)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
+# Access Point 0 for cortex m7
+# Access Point 3 for cortex m4
 flash: elf
 	STM32_Programmer_CLI -c port=SWD ap=0 -w $(BUILD_DIR)/$(TARGET).elf -rst
 
