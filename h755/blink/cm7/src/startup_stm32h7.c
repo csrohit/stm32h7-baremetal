@@ -1,3 +1,17 @@
+/**
+ * @file        startup_stm32h7.c
+ * @description Startup routine for STM32H7 micro-controller
+ * @author      Rohit Nimkar
+ * @version     1.0
+ * @date        2023-07-01
+ * @copyright   Copyright 2024 Rohit Nimkar
+ *
+ * @attention
+ *  Use of this source code is governed by a BSD-style
+ *  license that can be found in the LICENSE file or at
+ *  opensource.org/licenses/BSD-3-Clause
+ */
+
 #include "startup_stm32h7.h"
 
 /* Function declarations */

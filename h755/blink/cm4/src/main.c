@@ -1,3 +1,12 @@
+/**
+ * @file
+ *   main.c
+ *
+ * @brief
+ *   Main program to be run on Cortex M4 core
+ *   This program blinks the Yellow 🔴 Led after 100ms.
+ */
+
 #include "stm32h7xx.h"
 #include <stdint.h>
 

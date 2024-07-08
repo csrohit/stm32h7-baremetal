@@ -1,3 +1,10 @@
+# @file Makefile
+# @author Rohit Nimkar
+# 
+# 
+
+
+
 TARGET = blink
 
 LDSCRIPT 	= stm32h7_cm4.ld
